@@ -1,0 +1,7 @@
+api:
+  build: .
+  container_name: 'api'
+  ports:
+    - '3000:3000'
+  volumes:
+    - .:/metabrain
