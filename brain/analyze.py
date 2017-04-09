@@ -11,10 +11,10 @@ class Analyze:
 	def emotion(self, data):
 		return {
 			'好感度': self.test(data),
-			'嫌悪度': self.test(data),
+			'嫌悪感': self.test(data),
 			'興奮度': self.test(data),
 			'冷静度': self.test(data),
-			'興味度': self.test(data)
+			'集中度': self.test(data)
 		}
 
 	def test(self, data):
