@@ -10,7 +10,8 @@ analyze = Analyze()
 @app.route("/", methods = ['GET', 'POST'])
 def index():
 
-	api_input = json.loads(request.json)
+	api_input = request.json
+	api_input["records"] = json.loads(api_input["records"])
 	app.logger.debug(api_input)
 	if (api_input is None or "records" not in api_input):
 		return jsonify(error = "Need json includes image property which is 784(28 * 28) length, float([0, 1.0]) array")
